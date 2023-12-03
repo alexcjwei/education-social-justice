@@ -77,8 +77,6 @@
             <li>Heatmaps illustrating regional disparities in educational outcomes.</li>
             <li>Time trend analysis of educational resource allocation.</li>
         </ul>
-        <div id="loadDataExample"></div>
-        <script src="scripts/loadDataExample.js"></script>
         <div>
             <div>
                 <label for="tier-select">Choose a Tier:</label>
@@ -87,8 +85,13 @@
                     <!-- Tier options will be loaded here -->
                 </select>
             </div>
-            <div id="acceptByParentalIncome"></div>
+            <div id="acceptByParentalIncome" class="chart"></div>
             <script src="scripts/acceptByParentalIncome.js"></script>
+
+            We can see that generally, admission rates increase with parental income.
+            Using the select option to look at specific university tiers, we find that private schools, especially "Ivy Plus" schools,
+            admit many more students from the Top 0.1%. This is significant, especially considering that
+            the Top 0.1% make up a much smaller portion of the total population.
         </div>
     </section>
 

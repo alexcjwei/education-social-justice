@@ -6,7 +6,7 @@ function visualizeData(data) {
   // Clear existing chart
   d3.select(chart).selectAll('*').remove();
   // Set the dimensions and margins of the graph
-  const margin = { top: 20, right: 20, bottom: 30, left: 40 },
+  const margin = { top: 30, right: 20, bottom: 50, left: 60 },
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -23,7 +23,7 @@ function visualizeData(data) {
   svg
     .append('text')
     .attr('x', width / 2)
-    .attr('y', 0 + margin.top)
+    .attr('y', 0 - margin.top / 2 + 15) // Increase the 15 if needed
     .attr('text-anchor', 'middle')
     .style('font-size', '20px')
     .style('text-decoration', 'underline')
@@ -51,9 +51,9 @@ function visualizeData(data) {
     .attr(
       'transform',
       'translate(' + width / 2 + ' ,' + (height + margin.top + 20) + ')'
-    )
+    ) // Increase the 20 if needed
     .style('text-anchor', 'middle')
-    .text('Parental Income Percentile');
+    .text('Parental Income Bin');
 
   // Add Y axis
   const y = d3
@@ -66,11 +66,11 @@ function visualizeData(data) {
   svg
     .append('text')
     .attr('transform', 'rotate(-90)')
-    .attr('y', 0 - margin.left)
+    .attr('y', 0 - margin.left + 20) // Increase the 20 if needed
     .attr('x', 0 - height / 2)
     .attr('dy', '1em')
     .style('text-anchor', 'middle')
-    .text('Admission Rate');
+    .text('Admission Rate (%)');
 
   // Tooltip
   const tooltip = d3.select('#tooltip');
