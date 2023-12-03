@@ -101,3 +101,14 @@ footer {
 .rectangle-button:hover {
     background-color: #B6A18F; /* Darker shade on hover */
 }
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
