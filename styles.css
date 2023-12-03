@@ -72,3 +72,32 @@ footer {
   width: 100%;
   margin-top: 20px;
 }
+
+
+.graph-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.graph-container iframe {
+    width: 600px;
+    height: 500px;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+.rectangle-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D1C5B7; /* Morandi-inspired color */
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.rectangle-button:hover {
+    background-color: #B6A18F; /* Darker shade on hover */
+}
