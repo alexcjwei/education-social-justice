@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v6.js"></script>
+	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
     <title>Education Justice Analysis</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -84,12 +85,6 @@
             <iframe src="html/high_school_ranks_vs_parental_income_interactive.html"></iframe>
             <a href="html/high_school_ranks_vs_parental_income_static.html" class="rectangle-button">GPA summary plot</a>
         </div>
-        <div class="chart">
-            <img src="data/app_rates_by_tier_and_par_income_bin.png" height="600"/>
-        </div>
-        <div class="chart">
-            <img src="data/admit_rates_by_tier_and_par_income_bin.png" height="600"/>
-        </div>
         <div>
           <div>
             <label for="tier-select">Choose a Tier:</label>
@@ -100,6 +95,10 @@
           </div>
           <div id="acceptByParentalIncome" class="chart"></div>
           <script src="scripts/acceptByParentalIncome.js"></script>
+        <div id="attend-by-parental-income" style="height:600px"></div>
+        <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
+        <div id="apply-by-parental-income" style="height:600px"></div>
+        <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
 
           We can see that generally, admission rates increase with parental
           income. Using the select option to look at specific university tiers,
@@ -137,6 +136,5 @@
     </article>
     <!-- <svg id="example"></svg>
     <script src="scripts/example.js"></script> -->
-    <script src="scripts/scroll.js"></script>
   </body>
 </html>
