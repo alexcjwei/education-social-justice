@@ -95,10 +95,15 @@
           </div>
           <div id="acceptByParentalIncome" class="chart"></div>
           <script src="scripts/acceptByParentalIncome.js"></script>
-        <div id="attend-by-parental-income" style="height:600px"></div>
-        <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
-        <div id="apply-by-parental-income" style="height:600px"></div>
-        <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
+          <div>
+            <!-- Heatmaps -->
+            <label for="weighted-checkbox">Weighted</label>
+            <input type="checkbox" id="weighted-checkbox" value="weighted"/>
+            <div id="apply-by-parental-income" style="height:600px"></div>
+            <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
+            <div id="attend-by-parental-income" style="height:600px"></div>
+            <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
+          </div>
 
           We can see that generally, admission rates increase with parental
           income. Using the select option to look at specific university tiers,
