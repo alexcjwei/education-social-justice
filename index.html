@@ -6,11 +6,40 @@
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v6.js"></script>
     <title>Education Justice Analysis</title>
+    <style>
+        .chart {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: darkorange;
+        }
+        .axis-label {
+            font-size: 12px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Education Justice Analysis</h1>
     </header>
+    <div class="tooltip" id="tooltip"></div>
 
     <section id="introduction">
         <h2>I. Introduction</h2>
@@ -23,6 +52,10 @@
         <p>Overview of selected datasets used in the analysis.</p>
         <p>Explanation of the significance of each dataset in capturing different aspects of education justice.</p>
         <p>Transparency about data limitations and potential biases.</p>
+        <p>
+            We used the <a href="https://opportunityinsights.org/data/?paper_id=4268">Opportunity Insights College Admissions Dataset</a>.
+            The dataset includes admissions and attendance data from US colleges along with test data.
+        </p>
     </section>
 
     <section id="key-indicators">
@@ -46,6 +79,17 @@
         </ul>
         <div id="loadDataExample"></div>
         <script src="scripts/loadDataExample.js"></script>
+        <div>
+            <div>
+                <label for="tier-select">Choose a Tier:</label>
+                <select id="tier-select">
+                    <option value="all">All</option>
+                    <!-- Tier options will be loaded here -->
+                </select>
+            </div>
+            <div id="acceptByParentalIncome"></div>
+            <script src="scripts/acceptByParentalIncome.js"></script>
+        </div>
     </section>
 
 
