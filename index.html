@@ -147,6 +147,38 @@
         <h2>II. In-Depth Analysis in Line Plots</h2>
         <h3 class="blue-text">Based on the initial indicators our group came up with, we utilized the data set 
           collected to explore on other indicators of education injustice. </h3>
+        <input type="range" id="resolution-range" min="0" max="5" step="1" value="0" onchange="setChart(parseInt(this.value))" oninput="setChart(parseInt(this.value))">
+        <label for="resolution-range">Adjust 90-100% bin resolution (lower &lt;-> higher)</label>
+        </div>
+        <script>
+          // Hide div based on resolution value
+          const prefixes = [
+            "par_income_lab_vs_attend_num_xticks",
+            "par_income_lab_vs_rel_apply_unwgt_num_xticks",
+            "par_income_lab_vs_rel_att_cond_app_num_xticks",
+            "par_income_lab_vs_rel_attend_num_xticks",
+          ]
+          const suffixes = [
+            'high_10_percentile_bucket',
+            'high_5_percentile_bucket',
+            'high_1_percentile_bucket',
+            'high_0.1_percentile_bucket',
+            '1_percent_buckets',
+            'original_buckets',
+          ];
+          const setChart = (idx) => {
+            prefixes.forEach((prefix) => {
+              suffixes.forEach((suffix, i) => {
+                // Set all to hidden, except suffix with index i
+                const chartName = `${prefix}_${suffix}`
+                // const chart = document.getElementById(chartName);
+                console.log(chartName, i === idx)
+                // chart.hidden = i === idx;
+              })
+
+            })
+          }
+        </script>
         <h3>II.I Absolute Attendance Rate</h3>
         <div>
           <center>
