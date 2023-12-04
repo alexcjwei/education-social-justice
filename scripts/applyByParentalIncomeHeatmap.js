@@ -59,6 +59,7 @@ d3.csv('data/CollegeAdmissions_Data.csv', (d) => {
       xaxis: {
         ticks: '',
         side: 'top',
+        tickangle: 30,
       },
       yaxis: {
         ticks: '',
@@ -66,6 +67,7 @@ d3.csv('data/CollegeAdmissions_Data.csv', (d) => {
         width: 700,
         height: 700,
         autosize: true,
+        automargin: true,
       },
     };
 

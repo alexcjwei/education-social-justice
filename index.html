@@ -91,31 +91,75 @@
             <a href="html/high_school_ranks_vs_parental_income_static.html" class="rectangle-button">GPA summary plot</a>
         </div>
         <div>
-          <div>
+          <!-- <div>
             <label for="tier-select">Choose a Tier:</label>
             <select id="tier-select">
-              <option value="all">All</option>
+              <option value="all">All</option> -->
               <!-- Tier options will be loaded here -->
-            </select>
-          </div>
-          <div id="acceptByParentalIncome" class="chart"></div>
-          <script src="scripts/acceptByParentalIncome.js"></script>
+            <!-- </select>
+          </div> -->
+          <!-- Already shown above, commenting out -->
+          <!-- <div id="acceptByParentalIncome" class="chart"></div>
+          <script src="scripts/acceptByParentalIncome.js"></script> -->
           <div>
+            <h3>Another look at application/attendance rates</h3>
+            <p>
+              Let's break look at application/attendance rates again, this time
+              as heatmaps. 
+            </p>
+            <p>
+              Try toggling whether we should weight the data by SAT scores. What do you notice?
+            </p>
+            <div>
             <!-- Heatmaps -->
-            <label for="weighted-checkbox">Weighted</label>
-            <input type="checkbox" id="weighted-checkbox" value="weighted"/>
-            <div id="apply-by-parental-income" style="height:600px"></div>
+            <div>
+              <label for="weighted-checkbox">Weighted: </label>
+              <input type="checkbox" id="weighted-checkbox" value="weighted"/>
+            </div>
+            <div>
+              <label for="rate-select">Showing: </label>
+              <select id="rate-select">
+                <option value="attend">Attendance Rate</option>
+                <option value="apply">Application Rate</option>
+              </select>
+            </div>
+            <div hidden id="apply-by-parental-income" style="height:600px"></div>
             <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
             <div id="attend-by-parental-income" style="height:600px"></div>
             <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
+            <script>
+              // Hide div based on select value
+              const select = document.getElementById("rate-select")
+              const apply = document.getElementById("apply-by-parental-income")
+              const attend = document.getElementById("attend-by-parental-income")
+
+              select.addEventListener('change', (e) => {
+                if (e.target.value === "apply") {
+                  apply.hidden = false;
+                  attend.hidden = true;
+                } else if (e.target.value === "attend") {
+                  apply.hidden = true;
+                  attend.hidden = false;
+                }
+              })
+            </script>
+            <p>
+              The unweighted chart shows high attendance rates for students from the highest income brackets,
+              especially the Top 1 and 0.1% and for Ivy Plus schools.
+              The contrast between the highest parental income and other brackets is very pronounced,
+              suggesting that students from wealthier families are attending universities at a much higher rate.
+            </p>
+            <p>
+              What are some reasons for this? We can re-weight the attendance rates by test score and see how that changes attendance rates.
+            </p>
+            <p>
+              For some tiers, like Ivy Plus, see a smoothing out of the distribution, though the higher income percentiles still achieve higher attendance rates.
+              This means that while these universities might have made the acceptance rate more equitable between groups,
+              there are still other factors besides test scores that contribute towards the differences we see.
+            </p>
+            </div>
           </div>
 
-          We can see that generally, admission rates increase with parental
-          income. Using the select option to look at specific university tiers,
-          we find that private schools, especially "Ivy Plus" schools, admit
-          many more students from the Top 0.1%. This is significant, especially
-          considering that the Top 0.1% make up a much smaller portion of the
-          total population.
         </div>
       </section>
       <style></style>
