@@ -147,18 +147,18 @@
         <h2>II. In-Depth Analysis in Line Plots</h2>
         <h3 class="blue-text">Based on the initial indicators our group came up with, we utilized the data set 
           collected to explore on other indicators of education injustice. </h3>
-        <input type="range" id="resolution-range" min="0" max="5" step="1" value="0" onchange="setChartResolution(parseInt(this.value))" oninput="setChartResolution(parseInt(this.value))">
+        <input type="range" id="resolution-range" min="0" max="5" step="1" value="5" onchange="setChartResolution(parseInt(this.value))" oninput="setChartResolution(parseInt(this.value))">
         <label for="resolution-range">Adjust 90-100% bin resolution (lower &lt;-> higher)</label>
         </div>
         <h3>II.I Absolute Attendance Rate</h3>
         <div>
           <center>
-            <iframe id="par_income_lab_vs_attend-0" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
-            <iframe id="par_income_lab_vs_attend-1" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_high_5_percentile_bucket.html"></iframe>
-            <iframe id="par_income_lab_vs_attend-2" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_high_1_percentile_bucket.html"></iframe>
-            <iframe id="par_income_lab_vs_attend-3" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_high_0.1_percentile_bucket.html"></iframe>
-            <iframe id="par_income_lab_vs_attend-4" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_1_percent_buckets.html"></iframe>
-            <iframe id="par_income_lab_vs_attend-5" width=800 height=800 src="html/par_income_lab_vs_attend_num_xticks_original_buckets.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-0" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-1" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_high_5_percentile_bucket.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-2" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_high_1_percentile_bucket.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-3" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_high_0.1_percentile_bucket.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-4" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_1_percent_buckets.html"></iframe>
+            <iframe id="par_income_lab_vs_attend-5" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_original_buckets.html"></iframe>
           </center>
         <p>The graph that the anticipated linear correlation in the data does not hold true. Instead, the graph displays peaks on the ends, indicating that colleges prioritize different values in their admissions criteria. This can be explained by the different situations for either extremes, individuals from wealthier backgrounds exhibit a higher enrollment percentage since they are able to afford to pay full tuition and those in lower brackets who may not be financially able often receive a favorable aid plan. However, individuals in the middle-income range receive minimal tuition assistance, although they lack the means to pay for their education in full.
 
@@ -169,12 +169,12 @@
         <h3>II.II Ratio of Relative Attendance to Relative Application Rates</h3>
         <div>
           <center>
-            <iframe id="par_income_lab_vs_rel_att_cond_app-0" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_10_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-1" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_5_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-2" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-3" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_0.1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-4" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_1_percent_buckets.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-5" width=800 height=800 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_original_buckets.html"></iframe>
+            <iframe id="par_income_lab_vs_rel_att_cond_app-0" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_10_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-1" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_5_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-2" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-3" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_0.1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-4" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_1_percent_buckets.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_att_cond_app-5" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_original_buckets.html"></iframe>
           </center>
         <p>This graph indicates a linear correlation with income, aligning with the expected trend. Schools demonstrate a cohesive flow, with the trend being more pronounced in higher-ranking institutions. However, there is a noticeable difference in absolute attendance rates across income levels within a college.
 
@@ -183,24 +183,24 @@
         <h3>II.III Relative Attendance Rate</h3>
         <div>
           <center>
-            <iframe id="par_income_lab_vs_rel_attend-0" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_attend-1" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_high_5_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_attend-2" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_high_1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_attend-3" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_high_0.1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_attend-4" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_1_percent_buckets.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_attend-5" width=800 height=800 src="html/par_income_lab_vs_rel_attend_num_xticks_original_buckets.html"></iframe>
+            <iframe id="par_income_lab_vs_rel_attend-0" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_attend-1" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_high_5_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_attend-2" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_high_1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_attend-3" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_high_0.1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_attend-4" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_1_percent_buckets.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_attend-5" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_original_buckets.html"></iframe>
           </center>
           <p>The graph illustrates a trend with peaks at the ends, indicating higher acceptance rates than students applying. While the ideal scenario would be an even ratio of acceptance rates across all income brackets, it is crucial to ensure that the volume of applications from each bracket is also similar. Unfortunately, the current graph does not provide information on the volume of applications in each income bracket, making it challenging to assess the overall equity and fairness in the college admissions process. To comprehensively evaluate the situation, a more detailed analysis of application volumes across income brackets would be necessary.</p>
         </div>
         <h3>II.IV Unweighted Relative Application Rate</h3>
         <div>
           <center>
-            <iframe id="par_income_lab_vs_rel_apply_unwgt-0" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_10_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-1" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_5_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-2" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-3" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_0.1_percentile_bucket.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-4" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_1_percent_buckets.html"></iframe>
-            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-5" width=800 height=800 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_original_buckets.html"></iframe>
+            <iframe id="par_income_lab_vs_rel_apply_unwgt-0" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_10_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-1" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_5_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-2" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-3" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_0.1_percentile_bucket.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-4" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_1_percent_buckets.html"></iframe>
+            <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-5" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_original_buckets.html"></iframe>
           </center>
         <p>The analysis reveals a linear relationship, particularly prominent in more selective and higher-ranked schools. Better schools show a stronger correlation with this trend. However, the cost associated with sending in applications might affect students in lower-income brackets, leading them to apply to fewer schools and potentially limiting their in the selection of where to apply and the risk they're willing to take when applying to selective schools.
           The ability to visit schools and tours may also influence application rates, resulting in higher values in the higher income brackets, likely due to travel expenses of such visits. Additionally, the support provided by college counselors in the application process appears to be more prevalent in better-funded schools.
