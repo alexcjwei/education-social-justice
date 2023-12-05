@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Load d3.js -->
-    <title>Education Injustices</title>
+    <!-- Dependencies -->
+    <title>Education Justice Analysis</title>
     <style>
       /* Define a CSS style */
       .blue-text {
@@ -13,145 +13,77 @@
       }
     </style>
     <script src="https://d3js.org/d3.v6.js"></script>
-	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
-    <title>Education Justice Analysis</title>
+    <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <h1>Education Justice Analysis</h1>
+      <p>By Alex Wei, Malick Gaye, Ann (Xiaojun) Gao, and Elizabeth Hsieh</p>
     </header>
     <div class="tooltip" id="tooltip"></div>
     <article>
       <section id="introduction">
         <h2>Introduction</h2>
         <p>
-          To address the issue of social justice and its determinants, 
-          our group conducted comprehensive exploration in the topic.[1,2,3] 
-          While contemplating various domains such as environmental protection [1], 
-          resource conservation, and human rights[2], 
-          we discerned a distinct connection to the subject of education justice[3], 
-          fueled by our identity as college students. 
+          While education can be a foundation for equality and better employment opportunities, access is not equitable. Education justice is crucial for fostering equal opportunities and a fair, inclusive society. It emphasizes ensuring that every individual, regardless of background, has access to high-quality education and necessary resources for success, impacting both the present and future generations.
         </p>
         <p>
-          Although education can serve as the foundation for equality and 
-          provide communities with skills necessary to secure better employement opportunities, 
-          access to education is not equitable. 
-          Despite the inequality, education justice is a critical concept in 
-          fostering equal opportunities and promoting a fair and inclusive society. 
-          It emphasizes the need to ensure that every individual, regardless of their background, 
-          socio-economic status, or other factors, has access to high-quality education 
-          and the resources necessary to succeed.
-          Different from other social injustices, education equality is critical 
-          since it not only affects the present but also the future generation.
-        </p>
-        <p>
-          The most pivotal catalyst for our focus on this matter was the recent Supreme Court's affirmative action 
-          decision during the summer[4], delineating that institutions of higher education 
-          can no longer consider race as a specific criterion in their admission processes.
-        </p>
-        <p>
-          Given the multifaceted nature of Education Justice, we decided to develope an interactive interface.
-          We hope the interface would have the following 3 advantages:</p>
-        <p>
-          1.	Enhanced Comprehension: We would like to use an interactive interface uses visualization to facilitate 
-          understanding of the intricacies in Education Justice. We aim to simplify complex elements within educational systems.
-        </p>
-        <p>
-          2.	Non-Researchers Friendly:
-          We provide an alternative for individuals outside of academia 
-          and research to gain information on educational research results. 
-          We would like to engage with a broader audience, including policymakers, educators, and the general public. 
-        </p>
-        <p>
-          3.	Raise Public Awareness:
-          We aim to elevate public awareness on education justice through an interactive interface. 
-          Through the power of the internet, we would like the interface to to catalyze informed discussions 
-          and foster a collective understanding on the multifaceted challenges in our education systems. 
+          As students of Johns Hopkins, we wanted to analyze the status of education justice in the United States.
+          We were motivated in part by the Supreme Court's affirmative action decision during the summer, indicating that institutions of higher education can no longer consider race as a specific criterion in their admission processes.
         </p>
       </section>
-        <h3>Data Collection and Sources:</h3>
-        <p>
-          We used the
-          <a href="https://opportunityinsights.org/data/?paper_id=4268"
-            >Opportunity Insights College Admissions Dataset</a
-          >. The dataset includes admissions and attendance data from US
-          colleges along with test data. We also used CollegeBoard report 
-          for information on GPA and Standardized Examinations.
-        </p>
-        <center>
-        <h2 class="blue-text">Welcome to our interactive interface on educational justice! </h2>
-        <h2 class="blue-text">Follow the guidance of the BLUE lines to explore. </h2>
-        </center>
-        <p>
-          Here, we perform data analysis to provide insights 
-          at the intersection of education and social justice. 
-          This following interactive interface allows the user to 
-          visualize more vividly what may contribute to education inequality.
-        </p>
+      
       <section id="key-indicators">
         <h2>I. Key Indicators of Education Justice</h2>
-        <h2 class="blue-text">What are the key indicators of education justice?</h2>
+        <h3>What are the key indicators of education justice?</h3>
+        <ul>
           <li>Access to quality education.</li>
-          <li>Inclusive Curriculum.</li>
+          <li>Inclusive curriculum.</li>
           <li>Beginning age of education.</li>
-        <h2 class="blue-text">Perhaps the most widely accepted and direct indicator is:
-          GPA & School Ranks</h2>
         </ul>
-      <h3>I.I Relationship between GPA tier and parental income</h3>
-        <h3 class="blue-text">Before diving into the interactive graph showcasing GPA distributions based on parental income levels, take some time for a guess between the relationship!</h3>
-        <p> 
-            In the forthcoming interactive graph, choose different income levels to observe the corresponding GPA distributions. 
-            For a consolidated overview, click on the GPA summary plot.
+        <p>
+          In this analysis, we will mostly consider the problem of access to quality education.
+          First, we need to consider pre-college education.
         </p>
-        </div>
+        
+        <h3>I.A Relationship between GPA tier and parental income</h3>
+        <p>One indicator for academic access before college is GPA & School Ranks.</p>
+        <h4>Before exploring the interactive graph, consider the relationship between GPA distributions and parental income.</h4>
+        <p>Choose different income levels in the graph below to observe the corresponding GPA distributions or click on the GPA summary plot for an overview.</p>
         <div class="graph-container">
           <center>
             <iframe src="html/gpa_vs_parental_income_interactive.html"></iframe>
             <a href="html/gpa_vs_parental_income_static.html" class="rectangle-button">GPA summary plot</a>
-        </center>
+          </center>
         </div>
-        <p>
-          What did you notice?
-        </p>
-        <h3 class="blue-text">GPA tiers correlates directly with parental income. </h3>
-        <p></p>
-          Our findings indicate a discernible pattern: as parental income levels rise, so do GPA scores. 
-          The interactive graph invites you to explore these nuances firsthand, allowing for a dynamic understanding of the data. 
-          The overarching conclusion is that a higher parental income correlates with an increased likelihood of achieving higher GPAs. 
-          Given the crucial role of GPA in college admissions, this correlation raises concerns about potential education injustices. 
-        </p>
-        <h3>I.II Relationship between high school ranks and parental income</h3>
-        <h3 class="blue-text">Before you dive into our next interactive graph, ponder a guess about the potential relationship between high school ranks and parental income! </h3>
-        <p> Click through different income levels to witness how high school ranks correspond. For a comprehensive view, check out the summary plot. </p>
+        <p>As parental income levels rise, so do GPA's. Given the crucial role of GPA in college admissions, this correlation raises concerns about potential education injustices.</p>
+        
+        <h3>I.B Relationship between high school ranks and parental income</h3>
+        <h4>Before exploring the next interactive graph, consider the potential relationship between high school ranks and parental income.</h4>
+        <p>Click through different income levels to observe how high school ranks correspond. For a comprehensive view, check out the summary plot.</p>
         <div class="graph-container">
           <center>
             <iframe src="html/high_school_ranks_vs_parental_income_interactive.html"></iframe>
-            <a href="html/high_school_ranks_vs_parental_income_static.html" class="rectangle-button">GPA summary plot</a>
-        </center>
-        <div>
-        <p>
-          What did you notice?
-        </p>
-        <h3 class="blue-text">High school ranks correlates directly with parental income. </h3>
-        <p>
-          Our findings illuminate a clear trend: an uptick in parental income aligns with higher high school ranks. 
-          Navigate the interactive graph to grasp these subtleties firsthand, fostering a dynamic comprehension of the data. 
-          The overarching conclusion is that heightened parental income correlates with an increased likelihood of achieving superior high school ranks. 
-          Given the pivotal role of high school ranks in various educational pathways, this correlation sparks considerations about potential disparities in education. 
-        </p>
-        <h3 class="blue-text">Are there any other indicators of education injustice? </h3>
+            <a href="html/high_school_ranks_vs_parental_income_static.html" class="rectangle-button">High School Ranks summary plot</a>
+          </center>
+        </div>
+        <p>Clearly, increases in parental income aligns with higher high school ranks, sparking considerations about potential disparities in education.</p>
+        <p>These are just a couple of many indicators of education injustice.</p>
       </section>
 
       <section id="analysis">
-        <h2>II. In-Depth Analysis in Line Plots</h2>
-        <h3 class="blue-text">Based on the initial indicators our group came up with, we utilized the data set 
-          collected to explore on other indicators of education injustice. </h3>
+        <h2>II. University Attendance vs. Parental Income</h2>
+        <p>
+          Based on our initial indicators, we used the Opportunity Insights College Admissions Dataset to explore nuances in higher education access.
+        </p>
+        <p>
+          Hover over lines on the following interactive plots for more information, and play with the resolution slider below change the resolution.
+        </p>
         <input type="range" id="resolution-range" min="0" max="5" step="1" value="0" onchange="setChartResolution(parseInt(this.value))" oninput="setChartResolution(parseInt(this.value))">
         <label for="resolution-range">Adjust 90-100% bin resolution (lower &lt;-> higher)</label>
-      </div>
-      <h3 class="blue-text">Hover over lines on the following interactive plots for school, classification, and datapoint information!</h3>
-      <h3>II.I Absolute Attendance Rate</h3>
+        
+        <h3>II.A Absolute Attendance Rate</h3>
         <div>
           <center>
             <iframe id="par_income_lab_vs_attend-0" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
@@ -161,13 +93,12 @@
             <iframe id="par_income_lab_vs_attend-4" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_1_percent_buckets.html"></iframe>
             <iframe id="par_income_lab_vs_attend-5" width=800 height=525 src="html/par_income_lab_vs_attend_num_xticks_original_buckets.html"></iframe>
           </center>
-        <p>The graph that the anticipated linear correlation in the data does not hold true. Instead, the graph displays peaks on the ends, indicating that colleges prioritize different values in their admissions criteria. This can be explained by the different situations for either extremes, individuals from wealthier backgrounds exhibit a higher enrollment percentage since they are able to afford to pay full tuition and those in lower brackets who may not be financially able often receive a favorable aid plan. However, individuals in the middle-income range receive minimal tuition assistance, although they lack the means to pay for their education in full.
-
-          The right side of the graph appears more sparse, emphasizing the difference between public and private schools in these particular brackets. Public schools emerge as significant players, as they can offer more academic scholarships, influencing the decision-making process for prospective attendees of varing financial backgrounds.
-          
-          While the groups generally exhibit similar trends, specific examples, such as Harvard, stand out, highlighting the impact of individual school policies on admissions. This emphasizes the importance of considering unique institutional factors when interpreting broader trends in college admissions.</p>
         </div>
-        <h3>II.II Ratio of Relative Attendance to Relative Application Rates</h3>
+        <p>
+          The graph that the anticipated linear correlation in the data does not hold true. Instead, the graph displays peaks on the ends, indicating that colleges prioritize different values in their admissions criteria. This can be explained by the different situations for either extremes, individuals from wealthier backgrounds exhibit a higher enrollment percentage since they are able to afford to pay full tuition and those in lower brackets who may not be financially able often receive a favorable aid plan. However, individuals in the middle-income range receive minimal tuition assistance, although they lack the means to pay for their education in full. The right side of the graph appears more sparse, emphasizing the difference between public and private schools in these particular brackets. Public schools emerge as significant players, as they can offer more academic scholarships, influencing the decision-making process for prospective attendees of varing financial backgrounds. While the groups generally exhibit similar trends, specific examples, such as Harvard, stand out, highlighting the impact of individual school policies on admissions. This emphasizes the importance of considering unique institutional factors when interpreting broader trends in college admissions.
+        </p>
+        
+        <h3>II.B Ratio of Relative Attendance to Relative Application Rates</h3>
         <div>
           <center>
             <iframe id="par_income_lab_vs_rel_att_cond_app-0" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_high_10_percentile_bucket.html"></iframe>
@@ -177,12 +108,13 @@
             <iframe hidden id="par_income_lab_vs_rel_att_cond_app-4" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_1_percent_buckets.html"></iframe>
             <iframe hidden id="par_income_lab_vs_rel_att_cond_app-5" width=800 height=525 src="html/par_income_lab_vs_rel_att_cond_app_num_xticks_original_buckets.html"></iframe>
           </center>
-        <p>This graph indicates a linear correlation with income, aligning with the expected trend. Schools demonstrate a cohesive flow, with the trend being more pronounced in higher-ranking institutions. However, there is a noticeable difference in absolute attendance rates across income levels within a college.
-
-          The explanation for this difference can be explained by different financial situations. For example, an individuals from lower-income backgrounds is admitted, they may be less inclined to attend due to higher cost of tuition and may likely favor other more affordable options. This suggests that economic considerations play a significant role in shaping attendance choices, even when admissions policies accommodate lower-income individuals.</p>
         </div>
-        <h3>II.III Relative Attendance Rate</h3>
-        <h3 class="blue-text">The tight spread at middle-range parental incomes indicates that mean relative attendance rates in this range are almost universal. Slide the blue slider from the top of the section to the leftmost setting, and hover your mouse over this plot to see this!</h3>
+        <p>
+          This graph indicates a linear correlation with income, aligning with the expected trend. Schools demonstrate a cohesive flow, with the trend being more pronounced in higher-ranking institutions. However, there is a noticeable difference in absolute attendance rates across income levels within a college. The explanation for this difference can be explained by different financial situations. For example, an individuals from lower-income backgrounds is admitted, they may be less inclined to attend due to higher cost of tuition and may likely favor other more affordable options. This suggests that economic considerations play a significant role in shaping attendance choices, even when admissions policies accommodate lower-income individuals.
+        </p>
+        
+        <h3>II.C Relative Attendance Rate</h3>
+        <h3>Slide the blue slider to explore mean relative attendance rates across different income brackets.</h3>
         <div>
           <center>
             <iframe id="par_income_lab_vs_rel_attend-0" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_high_10_percentile_bucket.html"></iframe>
@@ -192,9 +124,12 @@
             <iframe hidden id="par_income_lab_vs_rel_attend-4" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_1_percent_buckets.html"></iframe>
             <iframe hidden id="par_income_lab_vs_rel_attend-5" width=800 height=525 src="html/par_income_lab_vs_rel_attend_num_xticks_original_buckets.html"></iframe>
           </center>
-          <p>The graph illustrates a trend with peaks at the ends, indicating higher acceptance rates than students applying. While the ideal scenario would be an even ratio of acceptance rates across all income brackets, it is crucial to ensure that the volume of applications from each bracket is also similar. Unfortunately, the current graph does not provide information on the volume of applications in each income bracket, making it challenging to assess the overall equity and fairness in the college admissions process. To comprehensively evaluate the situation, a more detailed analysis of application volumes across income brackets would be necessary.</p>
         </div>
-        <h3>II.IV Unweighted Relative Application Rate</h3>
+        <p>
+          The graph illustrates a trend with peaks at the ends, indicating higher acceptance rates than students applying. While the ideal scenario would be an even ratio of acceptance rates across all income brackets, it is crucial to ensure that the volume of applications from each bracket is also similar. Unfortunately, the current graph does not provide information on the volume of applications in each income bracket, making it challenging to assess the overall equity and fairness in the college admissions process. To comprehensively evaluate the situation, a more detailed analysis of application volumes across income brackets would be necessary.
+        </p>
+        
+        <h3>II.D Unweighted Relative Application Rate</h3>
         <div>
           <center>
             <iframe id="par_income_lab_vs_rel_apply_unwgt-0" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_high_10_percentile_bucket.html"></iframe>
@@ -204,38 +139,36 @@
             <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-4" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_1_percent_buckets.html"></iframe>
             <iframe hidden id="par_income_lab_vs_rel_apply_unwgt-5" width=800 height=525 src="html/par_income_lab_vs_rel_apply_unwgt_num_xticks_original_buckets.html"></iframe>
           </center>
-          <h3 class="blue-text">Students with high-income parents are largely responsible for dramatic increases in unweighted relative application rates. Use the slider at the top of the section to differentiate between these high-income groups.</h3>
-        <p>The analysis reveals a linear relationship, particularly prominent in more selective and higher-ranked schools. Better schools show a stronger correlation with this trend. However, the cost associated with sending in applications might affect students in lower-income brackets, leading them to apply to fewer schools and potentially limiting their in the selection of where to apply and the risk they're willing to take when applying to selective schools.
-          The ability to visit schools and tours may also influence application rates, resulting in higher values in the higher income brackets, likely due to travel expenses of such visits. Additionally, the support provided by college counselors in the application process appears to be more prevalent in better-funded schools.
-          Moreover, colleges may allocate fewer admissions resources to lesser-funded schools. Consequently, students from these schools might have limited exposure to information about various colleges, potentially impacting their knowledge and understanding of the available options.</p>
         </div>
-            <h2>III. Weighted vs. Unweighted</h2>
-            <p>
-              Let's look at application/attendance rates again, this time
-              as heatmaps. 
-            </p>
-            <p>
-              Try toggling whether to re-weight the data by SAT scores and see how that changes the chart.
-            </p>
-            <div>
-            <!-- Heatmaps -->
-            <div>
-              <label for="weighted-checkbox">Reweighted by SAT score: </label>
-              <input type="checkbox" id="weighted-checkbox" value="weighted"/>
-            </div>
-            <div>
-              <label for="rate-select">Showing: </label>
-              <select id="rate-select">
-                <option value="attend">Attendance Rate</option>
-                <option value="apply">Application Rate</option>
-              </select>
-            </div>
-            <div hidden id="apply-by-parental-income" style="height:600px"></div>
-            <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
-            <div id="attend-by-parental-income" style="height:600px"></div>
-            <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
-            <script>
-              // Hide div based on select value
+        <h4>
+          Students with high-income parents are largely responsible for dramatic increases in unweighted relative application rates. Use the slider at the top of the section to differentiate between these high-income groups.
+        </h4>
+        <p>
+          The analysis reveals a linear relationship, particularly prominent in more selective and higher-ranked schools. Better schools show a stronger correlation with this trend. However, the cost associated with sending in applications might affect students in lower-income brackets, leading them to apply to fewer schools and potentially limiting their in the selection of where to apply and the risk they're willing to take when applying to selective schools. The ability to visit schools and tours may also influence application rates, resulting in higher values in the higher income brackets, likely due to travel expenses of such visits. Additionally, the support provided by college counselors in the application process appears to be more prevalent in better-funded schools. Moreover, colleges may allocate fewer admissions resources to lesser-funded schools. Consequently, students from these schools might have limited exposure to information about various colleges, potentially impacting their knowledge and understanding of the available options.
+        </p>
+
+
+        
+        <h2>III. Weighted vs. Unweighted</h2>
+        <p>Explore application/attendance rates as heatmaps. Toggle re-weighting the data by SAT scores and choose between Attendance Rate and Application Rate.</p>
+        <div>
+          <div>
+            <label for="weighted-checkbox">Reweighted by SAT score: </label>
+            <input type="checkbox" id="weighted-checkbox" value="weighted"/>
+          </div>
+          <div>
+            <label for="rate-select">Showing: </label>
+            <select id="rate-select">
+              <option value="attend">Attendance Rate</option>
+              <option value="apply">Application Rate</option>
+            </select>
+          </div>
+          <div hidden id="apply-by-parental-income" style="height:600px"></div>
+          <script src="scripts/applyByParentalIncomeHeatmap.js"></script>
+          <div id="attend-by-parental-income" style="height:600px"></div>
+          <script src="scripts/attendByParentalIncomeHeatmap.js"></script>
+          <script>
+            // JavaScript script for toggling div visibility based on select value
               const select = document.getElementById("rate-select")
               const apply = document.getElementById("apply-by-parental-income")
               const attend = document.getElementById("attend-by-parental-income")
@@ -249,73 +182,29 @@
                   attend.hidden = false;
                 }
               })
-            </script>
-            <p>
-              The unweighted chart shows high attendance rates for students from the highest income brackets,
-              especially the Top 1 and 0.1% and for Ivy Plus schools.
-              The contrast between the highest parental income and other brackets is very pronounced,
-              suggesting that students from wealthier families are attending universities at a much higher rate.
-            </p>
-            <p>
-              What are some reasons for this? We can re-weight the attendance rates by test score and see how that changes attendance rates.
-            </p>
-            <p>
-              Some tiers, like Ivy Plus, see a smoothing out of the distribution, though the higher parental income percentiles still achieve higher attendance rates.
-              This means that while these universities might have made the acceptance rate more equitable between groups,
-              there are still other factors besides test scores that contribute towards the differences we see.
-            </p>
-            <p>
-              For example, students from higher income families likely have the time and resources to invest into extracurriculars,
-              which are taken into account by college admissions boards. Moreover, these students may have access to college counselors
-              to help with the admission process.
-            </p>
-            </div>
-          </div>
-
+          </script>
+          <p>
+            The unweighted chart shows high attendance rates for students from the highest income brackets, especially the Top 1 and 0.1% and for Ivy Plus schools. The contrast between the highest parental income and other brackets is very pronounced, suggesting that students from wealthier families are attending universities at a much higher rate.
+          </p>
+          <p>
+            What are some reasons for this? We can re-weight the attendance rates by test score and see how that changes attendance rates.
+          </p>
+          <p>
+            Some tiers, like Ivy Plus, see a smoothing out of the distribution, though the higher parental income percentiles still achieve higher attendance rates. This means that while these universities might have made the acceptance rate more equitable between groups, there are still other factors besides test scores that contribute towards the differences we see.
+          </p>
+          <p>
+            For example, students from higher income families likely have the time and resources to invest into extracurriculars, which are taken into account by college admissions boards. Moreover, these students may have access to college counselors to help with the admission process.
+          </p>
         </div>
       </section>
-      <style></style>
 
       <section id="conclusion">
         <h2>V. Conclusion</h2>
-        <p>In conclusion, education justice is importance due to its profound impact on both individuals and society. 
-          Our interactive interface takes into account of indicators like application/admission/attendance rates to 
-          explore the intricate nature of education injustices. Each trend in the plot provides insight into how these 
-          injustices manifest, accompanied by our hypotheses on how these trends form.
-        </p>
-        <p>
-          In the absolute attendance rate graph, peaks at the extremes imply that middle bracket students are less likely to attend, attributed to the high cost of school and insufficient financial aid. The relative attendance rate graph exhibits an anticipated linear relationship, indicating higher income brackets' increased likelihood to attend due to their ability to afford high tuition costs. The unweighted relative application graph displays a linear relationship, suggesting that higher-income bracket students may have more resources, enabling greater application numbers than lower-income students. The ratio graph reveals higher attendance rates than application numbers at both extremes, highlighting inequality between different income brackets.
-        </p>
-        <p>
-          The key takeaway from this interactive interface is that college admission is influenced by multiple factors, 
-          far beyond GPA and high school ranks. This finding is also coherent with the connection of various elements 
-          contributing to education injustice. While the presented plots offer valuable insights, certain crucial information, 
-          like extracurricular activities taken by students, is still unable to be captured through visualizations.
-        </p>
-        <p>
-          Despite this, the significance of this interactive interface lies in the ability to enhance our Above 
-          conclusions facilitate our understanding of education justice through single elements. 
-          For each aspect examined in each plot, we hope to spread awareness and take small steps at a time to improve. 
-          Measures to take include improving on how college application fee waiver works or provide more college 
-          application guidance for low-income household would all be good things to start with. 
-        </p>
-        <p>
-          Looking forward, we would like to explore additional facets of education justice and adopting cutting-edge technologies, 
-          including artificial intelligence and machine learning, to present data in more intuitive and accessible ways for continued progress.
-        </p>
-      </section>
-
-      <section id="references">
-        <h2>VI. References and Citations</h2>
-        <p> 1. College Entrance Examination Board, 1999, Group Differences in Standardized Testing and Social Stratification. Report No. 99-5, Eric, https://eric.ed.gov/?id=ED562656</p>
-        <p> 2.	Collins, Chunk. “The Climate Justice Shot Heard 'Round the World: No New Private Jet Infrastructure'”. Inequality.org. 2023. https://inequality.org/research/climate-justice-private-jet-infrastructure/</p>
-        <p> 3.	Kennedy, Sheila. “A Living Wage: a Human Right for all”. Inequality.org. 2017. https://inequality.org/research/living-wage-human/        </p>
-        <p> 4.	Osberg, Lars. “Is Education the Answer to Income Inequality?”. Inequality.org. 2023. https://inequality.org/reseharch/education-answer-income-inequality/         </p>
-        <p> 5.	Supreme Court of the United States. “Students for fair admissions, inc. v. President and fellows of Harvard College”. Argued October 31, 2022—Decided June 29, 2023. https://www.supremecourt.gov/opinions/22pdf/20-1199_hgdj.pdf         </p>
+        <p>Education justice is crucial for both individuals and society. Our interactive interface explores indicators like application/admission/attendance rates, providing insights into the nature of education injustices.</p>
+        <p>The key takeaway is that college admission is influenced by multiple factors beyond GPA and high school ranks, highlighting the complexity of education justice. While the presented plots offer valuable insights, certain crucial information, like extracurricular activities, requires further consideration.</p>
+        <p>Our analysis shows that there are levers outside of race that can be used to create more equitable education outcomes.</p>
       </section>
     </article>
-    <!-- <svg id="example"></svg>
-    <script src="scripts/example.js"></script> -->
     <script src="scripts/setChartResolution.js"></script>
   </body>
 </html>
