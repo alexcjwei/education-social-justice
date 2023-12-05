@@ -3,6 +3,7 @@ const prefixes = [
   'par_income_lab_vs_attend',
   'par_income_bin_vs_rel_attend',
   'par_income_lab_vs_rel_apply_unwgt',
+  'par_income_lab_vs_rel_apply_unwgt_num',
   'par_income_lab_vs_rel_att_cond_app',
   'par_income_lab_vs_rel_attend',
 ];
